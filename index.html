@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="iq">
+  <head>
+    <meta charset="utf-8">
+    <title>The interview</title>
+
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body ng-controller="InterviewController" ng-cloak>
+    <div id="main">
+      <header>
+        <h3 class="subtitle">- For internal use only -</h3>
+
+        <figure class="badge">
+          <img class="badge-image" src="thor.png">
+          <figcaption class="badge-caption">"Hear the thunder"</figcaption>
+        </figure>
+
+        <h1 class="title">The interview</h1>
+        <blockquote>A checklist so we can finally stop being lazy, people cannot find these questions on the interwebs, and stuff.</blockquote>
+      </header>
+
+      <h2 class="section-title" ng-show="gists.length > 0">Questions</h2>
+      <ul class="questions" ng-show="gists.length > 0">
+        <li class="question" ng-class="{'selected': selected.gists[gist.id]}" ng-repeat="gist in gists">
+          <a class="tag question-url" ng-href="{{gist.url}}" iq-show-gist="{{gist.id}}">&#x25be;</a>
+
+          <a class="question-name" ng-click="selectGist(gist.id)">
+            <span class="tag language-code" title="{{gist.language.name}}" style="background-color:{{gist.language.color}}">{{gist.language.code}}</span> {{gist.name}}
+          </a>
+        </li>
+      </ul>
+
+      <form id="interview_form" name="interview_form">
+        <textarea name="gist_ids" placeholder="Enter gist ids..." ng-model="interview.gist_ids"></textarea>
+        <button type="submit" ng-click="buildQuestionList()">Build</button>
+      </form>
+
+      <footer>
+        <ul class="language-reference">
+          <li class="language" ng-repeat="language in languages">
+            <span class="tag language-code" style="background-color:{{language.color}}">{{language.code}}</span> {{language.name}}
+          </li>
+        </ul>
+
+        <!-- <ul class="ranking-reference">
+          <li class="rank"><span class="tag">5</span> So sick&hellip;</li>
+          <li class="rank"><span class="tag">1</span> I quit&hellip;</li>
+        </ul> -->
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+
+    <script src="mock.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

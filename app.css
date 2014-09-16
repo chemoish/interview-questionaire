@@ -1,0 +1,375 @@
+body
+{
+  background-color: #456270;
+  font-family: Georgia;
+}
+
+#main
+{
+  background: url(http://youtubeonrepeat.com/codepen/bg.jpg);
+  border: 10px solid #000;
+  margin: 100px auto 0;
+  max-width: 960px;
+  min-width: 420px;
+  padding: 20px 30px;
+}
+
+header
+{
+  margin: 30px 0 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+blockquote
+{
+  color: #666;
+  font-size: 13px;
+  margin: 0 auto;
+  position: relative;
+  text-shadow: 1px 0px 1px #f0e7d6;
+  text-transform: uppercase;
+  transform: rotate(-13deg) skew(-13deg);
+  -webkit-transform: rotate(-13deg) skew(-13deg);
+  top: -110px;
+  width: 360px;
+}
+
+ul
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Title
+ */
+
+.title
+{
+  border-bottom: 7px solid #456270;
+  border-top: 7px solid #456270;
+  color: #456270;
+  margin: 0;
+  padding: 20px 0;
+  position: relative;
+  text-shadow: 4px 5px #F0E7D6, 5px 5px 2px #2a2a3c;
+  text-transform: uppercase;
+  transform: skew(-14deg) rotate(-14deg);
+  -webkit-transform: skew(-14deg) rotate(-14deg);
+  top: -120px;
+}
+
+/**
+ * Subtitle
+ */
+
+.subtitle
+{
+  background-color: #525d63;
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto;
+  padding: 8px 10px;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+  text-transform: uppercase;
+  width: 420px;
+  z-index: 1;
+}
+
+.subtitle:before,
+.subtitle:after
+{
+  background: url(http://youtubeonrepeat.com/codepen/bg.jpg);
+  border-radius: 90px;
+  content: ' ';
+  display: block;
+  height: 180px;
+  margin-top: -120px;
+  position: absolute;
+  top: 0;
+  width: 180px;
+}
+
+.subtitle:before
+{
+  left: 0;
+  margin-left: -151px;
+}
+
+.subtitle:after
+{
+  margin-right: -151px;
+  right: 0;
+}
+
+/**
+ * Badge
+ */
+
+.badge
+{
+  border-radius: 200px;
+  border: 15px double #000;
+  box-shadow: inset 0 0 75px 25px #999;
+  height: 350px;
+  margin: 0 auto;
+  margin-top: -50px;
+  opacity: .25;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 350px;
+}
+
+.badge-image
+{
+  margin: 0 -25%;
+  width: 150%;
+}
+
+.badge-caption
+{
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 2px #999;
+  top: 40px;
+  width: 100%;
+}
+
+/**
+ * Section title
+ */
+
+.section-title
+{
+  color: #f0e7d6;
+  font-size: 13px;
+  line-height: 26px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.section-title:after
+{
+  content: '\2022';
+  position: relative;
+  right: -6px;
+}
+
+.section-title:before
+{
+  content: '\2022';
+  position: relative;
+  left: -6px;
+}
+
+/**
+ * Questions
+ */
+
+.questions
+{
+  border: 3px solid #525d63;
+  border-bottom: 0;
+  position: relative;
+}
+
+.questions:after
+{
+  background: url(http://th03.deviantart.net/fs44/PRE/f/2009/136/c/1/Starcraft_2_Zerg_Ultralisk_by_Kerberos_of_Hades.jpg) no-repeat center 150px fixed;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: .05;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.questions:before
+{
+  border-bottom: 40px solid #525d63;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  content: ' ';
+  display: block;
+  left: 50%;
+  margin-left: -180px;
+  margin-top: -40px;
+  position: absolute;
+  width: 0px;
+}
+
+.question
+{
+  border-bottom: 2px solid #525d63;
+  position: relative;
+  z-index: 1;
+}
+
+.question:last-child
+{
+  border-bottom: none;
+}
+
+.question.selected a
+{
+  opacity: .3;
+}
+
+.question a
+{
+  color: #525d63;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.question a:hover
+{
+  color: #700000;
+}
+
+.question.selected .question-name
+{
+  text-decoration: line-through;
+}
+
+.question-name
+{
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.question-url
+{
+  color: #fff;
+  float: right;
+}
+
+/**
+ * Language
+ */
+
+.language-code
+{
+  color: #fff;
+  font-weight: normal;
+}
+
+/**
+ * Tag
+ */
+
+.tag
+{
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 20px;
+  z-index: 1;
+}
+
+/**
+ * Form
+ */
+
+#interview_form
+{
+  position: relative;
+}
+
+#interview_form textarea
+{
+  border: 3px solid #525d63;
+  box-sizing: border-box;
+  color: #525d63;
+  font-size: 13px;
+  height: 80px;
+  margin: 0;
+  outline: none;
+  padding: 8px 63px 8px 8px;
+  width: 100%;
+}
+
+#interview_form button[type="submit"]
+{
+  background-color: #525d63;
+  border-bottom-left-radius: 3px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  padding: 6px 12px;
+  position: absolute;
+  right: 3px;
+  text-transform: uppercase;
+  top: 3px;
+}
+
+#interview_form button[type="submit"]:active
+{
+  background-color: #3A4145;
+  margin-right: -2px;
+  margin-top: -2px;
+  transform: scale(.95);
+  -moz-transform: scale(.95);
+  -o-transform: scale(.95);
+  -webkit-transform: scale(.95);
+}
+
+#interview_form button[type="submit"]:hover
+{
+  background-color: #3A4145;
+}
+
+/**
+ * Reference
+ */
+
+.language-reference .language,
+.ranking-reference .rank
+{
+  color: rgba(0, 0, 0, .5);
+}
+
+.language-reference .tag,
+.ranking-reference .tag
+{
+  padding: 3px;
+}
+
+/**
+ * Language reference
+ */
+
+.language-reference
+{
+  margin-bottom: 20px;
+}
+
+/**
+ * Ranking reference
+ */
+
+/**
+ * Gist
+ */
+
+.gist .gist-file:last-child
+{
+  margin-bottom: 0 !important;
+}
