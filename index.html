@@ -23,7 +23,7 @@
       <h2 class="section-title" ng-show="gists.length > 0">Questions</h2>
       <ul class="questions" ng-show="gists.length > 0">
         <li class="question" ng-class="{'selected': selected.gists[gist.id]}" ng-repeat="gist in gists">
-          <a class="tag question-url" ng-href="{{gist.url}}" iq-show-gist="{{gist.id}}">&#x25be;</a>
+          <a class="question-url" ng-href="{{gist.url}}" iq-show-gist="{{gist.id}}">&#x25be;</a>
 
           <a class="question-name" ng-click="selectGist(gist.id)">
             <span class="tag language-code" title="{{gist.language.name}}" style="background-color:{{gist.language.color}}">{{gist.language.code}}</span> {{gist.name}}
@@ -32,7 +32,8 @@
       </ul>
 
       <form id="interview_form" name="interview_form">
-        <textarea name="gist_ids" placeholder="Enter gist ids..." ng-model="interview.gist_ids"></textarea>
+        <textarea name="gist_ids" placeholder="Enter gist ids..." ng-model="interview.gist_ids">4c5a684951ff16600740, 7782886293c4d93f4cfc, 8c537058955fe89b5899, cb5b4130287cb3bfd644, 47b12c818ca2e79a4989, 12ccad34670f0957401e, b5695876f5b140a42aec, 7056ecf24940cc2f89f1, 7f1d0625485ec37c2f49, 42bbf3ba725c4ab24622
+</textarea>
         <button type="submit" ng-click="buildQuestionList()">Build</button>
       </form>
 

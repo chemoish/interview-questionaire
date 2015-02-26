@@ -213,7 +213,7 @@ iq.directive('iqShowGist', [
       $stylesheet = $document.find('#gist_css');
 
       if ($stylesheet.length == 0) {
-        $document.find('head').append('<link id="gist_css" rel="stylesheet" href="' + GIST_GITHUB_DOMAIN + path + '" />');
+        $document.find('head').append('<link id="gist_css" rel="stylesheet" href="' + path + '" />');
       }
     }
 

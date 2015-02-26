@@ -178,6 +178,7 @@ ul
 {
   border: 3px solid #525d63;
   border-bottom: 0;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -209,6 +210,7 @@ ul
 
 .question
 {
+  background-color: rgba(255, 255, 255, 0.55);
   border-bottom: 2px solid #525d63;
   position: relative;
   z-index: 1;
@@ -255,6 +257,9 @@ ul
 {
   color: #fff;
   float: right;
+  line-height: 49px;
+  text-align: center;
+  width: 49px;
 }
 
 /**
@@ -369,7 +374,17 @@ ul
  * Gist
  */
 
+.gist .gist-file
+{
+  border-radius: 0 !important;
+}
+
 .gist .gist-file:last-child
 {
   margin-bottom: 0 !important;
+}
+
+.gist .gist-data
+{
+  overflow: initial;
 }
